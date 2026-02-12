@@ -1,0 +1,21 @@
+﻿@model NateParker.ViewModels.StravaViewModel
+@{
+    ViewData["Title"] = "API Work";
+}
+<div class="text-center">
+    <h1 class="display-4">Strava</h1>
+</div>
+<table>
+    <tr>
+        <td><label asp-for="TotalRides"></label></td>
+        <td>@Model.TotalRides</td>
+    </tr>
+    <tr>
+        <td><label asp-for="TotalDistance"></label></td>
+        <td>@Model.TotalDistance mi</td>
+    </tr>
+    <tr>
+        <td><label asp-for="TotalMovingTime"></label></td>
+        <td>@Model.TotalMovingTime</td>
+    </tr>
+</table>

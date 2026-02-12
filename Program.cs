@@ -1,4 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using NateParker.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var connectionString = "";
+
+builder.Services.AddDbContext<QuilmesDataContext>(options =>
+    options.UseSqlServer(connectionString));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

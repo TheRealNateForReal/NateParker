@@ -1,0 +1,6 @@
+﻿@model NateParker.ViewModels.Quilmes.PlayerViewModel
+
+@foreach (var player in Model.Players)
+{
+    @Html.Raw(@player.FirstName + "<br/>");
+}
