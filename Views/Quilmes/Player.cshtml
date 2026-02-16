@@ -1,6 +1,25 @@
-﻿@model NateParker.ViewModels.Quilmes.PlayerViewModel
+﻿@model NateParker.ViewModels.Quilmes.RosterViewModel
 
-@foreach (var player in Model.Players)
-{
-    @Html.Raw(@player.FirstName + "<br/>");
-}
+<table>
+    <thead>
+        <tr>
+            <th>Player</th>
+            <th>GP</th>
+            <th>Goals</th>
+            <th>Assists</th>
+            <th>Cards</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.PlayerDetails)
+        {
+            <tr>
+                <td>@Html.Raw($"{item.Player.FirstName} {item.Player.LastName}")</td>
+                <td>@item.GamesPlayed</td>
+                <td>@item.Goals</td>
+                <td>@item.Assists</td>
+                <td>@item.Cards</td>
+            </tr>
+        }
+    </tbody>
+</table>
